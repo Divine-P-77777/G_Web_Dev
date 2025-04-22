@@ -14,3 +14,7 @@ body {
     
     
   }
+
+  body{
+    border: solid 10px;
+  }
