@@ -40,7 +40,7 @@ console.log(b); // 👉 "Phillic"
 
 
 
-let obj1 = { name: "Deepak",age:14,}; // data
+let obj1 = { name: "Deepak",age:14}; // data
 let obj2 = obj1;
 
 obj2.name = "Phillic";

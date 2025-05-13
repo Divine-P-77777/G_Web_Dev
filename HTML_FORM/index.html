@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Form Elements Explained</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="form-wrapper">
+
+    <!-- Basic input types in a styled form -->
+    <form action="/submit_basic" method="get" class="form-block">
+      <h2>Basic Inputs</h2>
+      <input type="text" placeholder="Text field" size="30" />
+
+      <!-- Multiple Selection - Checkboxes -->
+      <div class="form-section">
+        <h3>Select your interests (Multiple allowed):</h3>
+        <div class="options-group">
+          <label><input type="checkbox" name="interests" value="sports" /> Sports</label>
+          <label><input type="checkbox" name="interests" value="music" /> Music</label>
+          <label><input type="checkbox" name="interests" value="travel" /> Travel</label>
+        </div>
+      </div>
+
+      <!-- Single Selection - Radio Buttons -->
+      <div class="form-section">
+        <h3>Select your gender (Only one):</h3>
+        <div class="options-group">
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <input type="submit" value="Submit Form" />
+        <input type="button" value="Click me" />
+        <input type="text" value="Read only" readonly />
+        <input type="text" value="Disabled" disabled />
+      </div>
+    </form>
+
+    <!-- Label binding to inputs -->
+    <form action="/submit_name" method="post" class="form-block">
+      <h2>Name Input</h2>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" />
+
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" />
+    </form>
+
+    <!-- Email form -->
+    <form action="/action_page.php" autocomplete="off" class="form-block">
+      <h2>Email Input</h2>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </form>
+
+    <!-- Form without validation -->
+    <form action="/action_page.php" novalidate class="form-block">
+      <h2>Form Without Validation</h2>
+      <input type="text" placeholder="No validation even if required" required />
+    </form>
+
+    <!-- Dropdown and Textarea -->
+    <form action="/action_page.php" class="form-block">
+      <h2>Dropdown, Textarea & More</h2>
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars" size="4" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi" selected>Audi</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea name="message" rows="5" cols="30">The cat was playing in the garden.</textarea>
+
+      <!-- Grouped Fieldset -->
+      <fieldset>
+        <legend>Personalia</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" value="John" />
+
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" value="Doe" />
+
+        <input type="submit" value="Submit" formaction="/submit_form_personal" />
+      </fieldset>
+
+      <!-- Additional input types -->
+      <label for="favcolor">Favorite color:</label>
+      <input type="color" id="favcolor" name="favcolor" />
+
+      <label for="datemin">Choose date:</label>
+      <input type="date" id="datemin" name="datemin" min="2015-01-02" max="2025-04-14" />
+
+      <label for="quantity">Quantity (1–5):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5" />
+
+      <label for="vol">Volume (0–50):</label>
+      <input type="range" id="vol" name="vol" min="0" max="50" />
+
+      <label for="files">Upload files:</label>
+      <input type="file" id="files" name="files" multiple />
+
+      <input type="search" placeholder="Search here" />
+
+      <div class="button-group">
+        <input type="submit" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+
+  </div>
+
+</body>
+</html>

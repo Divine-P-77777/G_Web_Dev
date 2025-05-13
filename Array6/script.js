@@ -30,6 +30,7 @@ console.log(arr2)
 // Important
 // splice(start, deleteCount, addItem1, ...)
 // Add/Remove/Replace items
+// deleteCount = 3: Delete 3 items → "Man", "Ultra", "Man"
 let hero=["Spider","Man","Ultra","Man"]
 hero.splice(1,3, "Forever 💍");
 console.log(hero)

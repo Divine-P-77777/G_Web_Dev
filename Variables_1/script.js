@@ -15,7 +15,7 @@
 
 // the above is equivalent to 
 // var _b;
-// _b ="RED"
+// _b ="1"
 
 // var data =typeof(_b)
 // console.log(data)
@@ -26,8 +26,8 @@
 
 // Hoisting
 
-console.log(`here hoisting is pyare jaanu: ${c}`)  //it give  undefined because value not assigned
-var c="hoist"
+// console.log(`here hoisting is pyare jaanu: ${c}`)  //it give  undefined because value not assigned
+// var c="hoist"
 
 // var c; it comes top of the  code  becaue it the behaviour of javascript 
 // c="hoist"
@@ -39,13 +39,14 @@ a = 30;      // ✅ Reassignment allowed
 console.log(a); // 30
 
 // global scoped or functional scoped
+// var is functional and const,let are braces scoped
 function greet() {
     if (true) {
       var message = "Hello from var!";
     }
     console.log(message); // ✅ Accessible here
   }
-//   console.log(message)  it gives not defined
+  // console.log(message)  //it gives not defined
   greet();
 
 
@@ -71,6 +72,7 @@ function greet1() {
       let msg = "Hello from let!";
    
     console.log(msg);  }// ✅ Accessible here
+    // console.log(msg)
   }
   
   greet1();

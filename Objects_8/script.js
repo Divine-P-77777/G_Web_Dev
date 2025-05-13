@@ -2,6 +2,10 @@
 
 // An object literal is a list of property names:values inside curly braces {}.
 // Note: An object literal is also called an object initializer.
+// In JavaScript objects:
+
+// If the value of a key is a function, then it is called a method.
+// If the value is anything else (like string, number, array, object, etc.), then it’s called a property.
 
 // Create an Object
 const person = {}; //Object Literal

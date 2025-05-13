@@ -37,11 +37,11 @@ const greet1 = function(name,age,city) {
   };
   
   console.log(greet1("Deepak","20","Guwahati"));
-  
+  myFunction2
 // Anonymous Function Expression
   const x = function (a, b) {return a * b};
   let y = x(10, 5);
-  console.log(x(2,3)); // this gives 50 from function
+  console.log(x(2,3)); // this gives from function
   console.log(y); // this gives 50 from variable
 
 // Constructor Function  : it returns object 
@@ -82,7 +82,8 @@ console.log(sayHi()); // this gives value which return from function
 
 // Function Hoisting :Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.
 
-myFunction2(5);
+var abc = (5);
+console.log(abc)
 
 function myFunction2(y) {
   return y * y;

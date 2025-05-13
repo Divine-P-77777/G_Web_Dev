@@ -9,10 +9,20 @@ console.log(greeting)  //here concatination heppens
 
 //Logical Expressions
 
-console.log(true && false  // false
-)
-console.log(true && true  // true
-)
+// Logical AND (&&)
+console.log(true && false);  // false
+console.log(true && true);   // true
+console.log(false && false); // false
+
+// Logical OR (||)
+console.log(true || false);  // true
+console.log(false || false); // false
+console.log(true || true);   // true
+
+// Logical NOT (!)
+console.log(!true);          // false
+console.log(!false);         // true
+
 
 //Comparison Expressions
 
@@ -28,6 +38,9 @@ let status = age <= 18 ? "minor" : "adult";  //  true honese minor hoga otherwis
 console.log(status)
 
 
+// 'status' is deprecated, it means:
+
+// 🔴 You're using a variable or property named status that some tool or environment (like a browser API, library, or linter) has marked as outdated or unsafe to use because it's reserved, conflicting, or will be removed in the future.///////
 
 // Conditional Statements
 

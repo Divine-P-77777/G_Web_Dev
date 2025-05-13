@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Part 1 - Learning & Revision</title>
+</head>
+
+<body onload="checkCookies()">
+
+  <!-- DOM Manipulation Examples -->
+  <p id="demo"></p>
+  <p class="demo"></p>
+  <p class="demo">Nice</p>
+  <p id="para">This is a paragraph.</p>
+  <h1></h1>
+  <h1>Let's Dive in DOM</h1>
+
+  <!-- Attribute Manipulation -->
+  <a href="http://" target="_blank" rel="noopener noreferrer">Click Me</a>
+  <ul class="item">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  <ul class="item">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <!-- Image Source Change -->
+  <img id="image" src="https://images4.alphacoders.com/133/1332281.jpeg" width="160" height="120">
+
+  <!-- Form Validation Example -->
+  <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Number Validation Example -->
+  <p>Please input a number between 1 and 10:</p>
+  <input id="numb">
+  <button type="button" onclick="myFunction()">Submit</button>
+  <p id="demo3"></p>
+
+  <!-- Simple Style Manipulation -->
+  <h1 id="id1">My Heading 1</h1>
+  <button type="button" onclick="document.getElementById('id1').style.color = 'red'">Click Me!</button>
+
+  <!-- Text Update with Click -->
+  <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+  <p>Click the button to display the date.</p>
+  <button onclick="displayDate()">The time is?</button>
+  <p id="event"></p>
+
+  <!-- Assign Event with JS -->
+  <p>Click "Try it" to execute the displayDate() function.</p>
+  <button id="myBtn">Try it</button>
+  <p id="assign"></p>
+
+  <!-- oninput and onchange Example -->
+  <div style="display: flex; flex-direction: column;">
+    <input type="text" id="fname" placeholder="this is oninput" oninput="upperCaseInput()">
+    Enter your name: <input type="text" id="onchange" onchange="upperCaseChange()">
+    <p>When you leave the input field, a function transforms the input to upper case.</p>
+  </div>
+
+  <!-- Mouse Event Example -->
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+    Mouse Over Me
+  </div>
+
+  <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+    style="margin-top: 10px; background-color:#D94A38;width:90px;height:20px;padding:40px;">
+    Click Me
+  </div>
+
+  <script src="part1.js">
+    
+  </script>
+</body>
+
+</html>
