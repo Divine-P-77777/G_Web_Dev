@@ -24,9 +24,43 @@
     <li>Node B</li>
     <li>Node C</li>
   </ul>
+  <!-- onChange Event Example --> 
+   <h2>Enter your name:</h2>
+  <input type="text" id="nameInput" />
+
+  <p id="output"></p>
+
+  <script>
+    const input = document.getElementById('nameInput');
+    const output = document.getElementById('output');
+
+    // Attach the onChange-like event (called 'input' or 'change' in vanilla JS)
+    input.addEventListener('input', function (e) {
+      console.log(e); // Full event object
+      console.log(e.target.value); // Current input value
+
+      output.textContent = "You typed: " + e.target.value;
+    });
+  </script>
 
 
 
+<!-- e is the event object passed to the function.
+
+e.target is the input element.
+
+e.target.value gives the current text inside the input.
+
+addEventListener('input', ...) responds immediately as the user types. You could also use 'change', but it triggers only when the input loses focus.
+
+ -->
+
+ <!-- Property	Description
+e.type	Type of event (e.g., 'change', 'click')
+e.target	The DOM element that triggered the event
+e.target.value	The current value (used in inputs)
+e.preventDefault()	Prevents default behavior (e.g., form submit, prevent page from refreshing)
+e.stopPropagation()	Stops the event from bubbling up -->
 
 <script src="part2.js"></script>
 </body>

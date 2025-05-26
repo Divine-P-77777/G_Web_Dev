@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS for React</title>
+</head>
+
+<body>
+    <h2>localStorage Demo</h2>
+
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="getData()">Get Data</button>
+    <button onclick="removeData()">Remove Data</button>
+    <button onclick="clearAll()">Clear All</button>
+    <input type="text" id="usernameInput" placeholder="Enter your name" onchange="saveData(event)" />
+
+    <p id="output"></p>
+
+    <!-- Local Storage & Session Storage
+Both are part of the Web Storage API, used to store key-value pairs in the browser.
+
+localStorage
+Persists even after closing the browser.
+Commonly used for tokens, theme, user preferences, etc. -->
+
+
+    <script>
+        // Save data
+        function saveData(e) {
+            const username = e.target.value; // Get value from 
+            localStorage.setItem("username", username);
+            document.getElementById("output").innerText = "Data saved!";
+        }
+
+        // Get data
+        function getData() {
+            const user = localStorage.getItem("username");
+            if (user) {
+                document.getElementById("output").innerText = `Hello, ${user}!`;
+            } else {
+                document.getElementById("output").innerText = "No user found.";
+            }
+        }
+
+        // Remove specific data
+        function removeData() {
+            localStorage.removeItem("username");
+            document.getElementById("output").innerText = "Username removed.";
+        }
+
+        // Clear all data
+        function clearAll() {
+            localStorage.clear();
+            document.getElementById("output").innerText = "All data cleared.";
+        }
+    </script>
+ <!-- <script src="functions.js"></script> -->
+    <script src="arr_obj.js"></script> 
+    <!-- <script src="minortopics.js"></script>
+    <script src="asynchronous.js"></script> -->
+</body>
+
+</html>

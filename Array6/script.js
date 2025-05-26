@@ -91,3 +91,65 @@ console.log(name.sort())
 
 console.log(name.reverse())
 console.log(num.reverse())
+
+
+
+// ... (spread operator)
+
+const original = [1, 2, 3];
+const copied = [...original];
+
+console.log(copied); // [1, 2, 3]
+
+
+// Here, copied is a new array with the same elements, not a reference to the original.
+
+
+
+// const copied = original;   //It just copies the reference, not the actual elements
+
+
+//You can also add elements while copying:
+
+const arr3 = [2, 3];
+const newArr = [1, ...arr3, 4,{}];
+
+console.log(newArr); // [1, 2, 3, 4,{}]
+
+
+//❗Note: Shallow copy
+
+
+const nested = [1, [2, 3]];
+const copy = [...nested];
+
+copy[1][0] = 99;
+
+console.log(nested); // [1, [99, 3]] → affected!
+
+
+
+//
+const originalArray = [1, [2, 3], { name: "Dipu" }];
+const deepCopiedArray = JSON.parse(JSON.stringify(originalArray)); // Nested array is preserved, ✅ object is preserved, ✅ values are untouched.
+
+deepCopiedArray[1][0] = 99;
+deepCopiedArray[2].name = "Alya";
+
+console.log(originalArray); // [1, [2, 3], { name: "Dipu" }]
+console.log(deepCopiedArray); // [1, [99, 3], { name: "Alya" }]
+
+
+
+// | Method             | Purpose                          | Output Type |
+// | ------------------ | -------------------------------- | ----------- |
+// | `JSON.stringify()` | Converts JS object → JSON string | `string`    |
+// | `JSON.parse()`     | Converts JSON string → JS object | `object`    |
+
+const obj = { name: "Dipu", age: 20 };
+
+// Convert object to string
+const str = JSON.stringify(obj); // '{"name":"Dipu","age":20}'
+
+// Convert string back to object
+const parsed = JSON.parse(str); // { name: "Dipu", age: 20 }
