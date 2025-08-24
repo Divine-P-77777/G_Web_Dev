@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fetch & Map Example</title>
+</head>
+<body>
+  <h2>User List</h2>
+  <ul id="userList"></ul>
+
+  <script src="index.js"></script>
+  <script >
+
+    // Function that returns a Promise using fetch
+function fetchUsers() {
+  return fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to fetch users");
+      return res.json(); // returns a Promise that resolves to JSON
+    });
+}
+
+// Call fetchUsers and map the data into HTML
+fetchUsers()
+  .then((users) => {
+    const list = document.getElementById("userList");
+
+    users.map((user) => {
+      const li = document.createElement("li");
+      li.textContent = `${user.name} (${user.email})`;
+      list.appendChild(li);
+    });
+  })
+  .catch((err) => {
+    console.error("Error:", err);
+  })
+  .finally(() => {
+    console.log("Fetch complete.");
+  });
+
+  </script>
+
+</body>
+</html>

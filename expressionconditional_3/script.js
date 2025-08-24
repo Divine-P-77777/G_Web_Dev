@@ -27,11 +27,15 @@ console.log(!false);         // true
 //Comparison Expressions
 
  var a = 5 > 3  // true
-var b = 4 == "4"  // false
+var b = 4 == "4"  // true 
 console.log(a)
-console.log(b)
+console.log(`the value of b is ${b}`)
 
-//Ternary (Conditional) Expression
+// == only checks values
+// ===  checks both values and type
+
+//Ternary (Conditional) Expression 
+//  condition ? excute this if true : otherwise execute this 
 let age = 19;
 
 let status = age <= 18 ? "minor" : "adult";  //  true honese minor hoga otherwise true me adult

@@ -26,7 +26,7 @@
 
 // Hoisting
 
-// console.log(`here hoisting is pyare jaanu: ${c}`)  //it give  undefined because value not assigned
+// console.log(`here hoisting is pyare jaanu: ${c}`)  //here assign undefined by default by javascript
 // var c="hoist"
 
 // var c; it comes top of the  code  becaue it the behaviour of javascript 
@@ -35,11 +35,12 @@
 
 var a = 10;
 var a = 20;  // ✅ Redeclaration allowed
-a = 30;      // ✅ Reassignment allowed
+a = 30;      // ✅ Reassignment or Initialization allowed 
 console.log(a); // 30
 
-// global scoped or functional scoped
-// var is functional and const,let are braces scoped
+// global scoped or functional scoped & braces scoped
+
+// var is functional/global scoped and const,let are braces scoped
 function greet() {
     if (true) {
       var message = "Hello from var!";

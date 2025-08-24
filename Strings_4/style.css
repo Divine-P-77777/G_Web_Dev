@@ -18,3 +18,10 @@ body {
   body{
     border: solid 10px;
   }
+
+ .a{
+height: 300px;
+width: 350px;
+border-radius: 8px;
+
+  }

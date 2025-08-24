@@ -153,3 +153,33 @@ console.log(h);
 for( let key in h){
 console.log( key + ": " + h[key]) ;
 }   
+
+
+
+// ways to create objects in JavaScript:
+
+// 1️⃣ Object literal
+// 2️⃣ Object constructor (new Object())
+// 3️⃣ Constructor function (custom function + new)
+// 4️⃣ Class syntax (class + new)
+// 5️⃣ Object.create()
+// 6️⃣ Factory function (returns an object)
+// 7️⃣ Using Object.assign()
+// 8️⃣ JSON parse (JSON.parse)
+
+
+
+// | Method             | Purpose                          | Output Type |
+// | ------------------ | -------------------------------- | ----------- |
+// | `JSON.stringify()` | Converts JS object → JSON string | `string`    |
+// | `JSON.parse()`     | Converts JSON string → JS object | `object`    |
+
+const obj = { name: "Dipu", age: 20 };
+
+// Convert object to string
+const str = JSON.stringify(obj); // '{"name":"Dipu","age":20}'
+
+// Convert string back to object
+const parsed = JSON.parse(str); // { name: "Dipu", age: 20 }
+
+

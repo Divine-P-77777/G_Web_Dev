@@ -19,7 +19,7 @@ while (i <=  arr.length) { //equal-to se pura  chalta hai
 // 🔹 Runs at least once, even if the condition is false.
 let j = 1;
 do {
-  console.log("Jaanu Alya forever 💞", j);
+  console.log("Jaanu Alex forever 💞", j);
   j++;
 } while (j <= 3);
 
@@ -42,7 +42,7 @@ for (let key of names) {
 
 let loveStory = {
   boy: "Deepak",
-  girl: "Alya",
+  girl: "Alex",
   years: 10
 };
 

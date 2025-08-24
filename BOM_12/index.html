@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOM Demo</title>
+</head>
+<body>
+  <h1>BOM Demo with Timer</h1>
+  <button onclick="startTimer()">Start Interval</button>
+  <button onclick="stopTimer()">Stop Interval</button>
+  <button onclick="startTimeout()">Start Timeout</button>
+
+
+
+
+    <h2></h2>
+    <button>Remove</button>
+
+  <script>
+ 
+
+
+    // ✅ Timers
+    let intervalId = null;
+    let timeoutId = null;
+
+    function startTimer() {
+      if (intervalId === null) {
+        intervalId = setInterval(() => {
+          console.log("⏱ Interval running every 1 sec");
+        }, 1000);
+      }
+    }
+
+    function stopTimer() {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        console.log("❌ Interval stopped");
+        intervalId = null;
+      }
+    }
+
+    function startTimeout() {
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        console.log("⏰ Timeout ran after 2 sec");
+      }, 2000);
+    }
+
+    // ✅ Example for window.open + print
+    // const win = window.open("https://example.com", "_blank");
+    // win.close();
+    // window.print();
+
+    // ✅ Example for confirm / prompt
+    // alert("Welcome!");
+    // const confirmed = confirm("Do you want to proceed?");
+    // const name = prompt("What's your name?");
+    // console.log("Name entered:", name);
+
+    
+
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>

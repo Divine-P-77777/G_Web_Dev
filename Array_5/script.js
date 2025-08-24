@@ -1,15 +1,15 @@
 //push()
 //Add at end
 
-let arr = ["Deepak"]; // or let arr = ["Deepak 💖"];
-arr.push("Alya 💘",124);
+let arr = ["Deepak"]; // or let arr = ["Deepak"];
+arr.push("Alex ",124);// push is  a  method or function 
 console.log(arr);
 
 // pop()
 // Remove from end
 
-let arr1 = ["alya",123,145];
-arr1.pop();
+let arr1 = ["Alex",123,145];
+arr1.pop();  // remove last element 
 console.log(arr1);
 
 // unshift()
@@ -28,7 +28,7 @@ arr2.shift();
 console.log(arr2)
 
 // Important
-// splice(start, deleteCount, addItem1, ...)
+// splice(start, deleteCount, addItem1,addItem2 ...)
 // Add/Remove/Replace items
 // deleteCount = 3: Delete 3 items → "Man", "Ultra", "Man"
 let hero=["Spider","Man","Ultra","Man"]
@@ -66,7 +66,7 @@ console.log(fruits.indexOf("apple"))
 // Convert array to string
 
 let join = fruits.join(" || ");
-console.log(join)
+console.log("the resultant join be",join)
 
 // concat()
 // Merge arrays
@@ -94,7 +94,7 @@ console.log(num.reverse())
 
 
 
-// ... (spread operator)
+// ... (spread operator) imp
 
 const original = [1, 2, 3];
 const copied = [...original];
@@ -123,7 +123,7 @@ console.log(newArr); // [1, 2, 3, 4,{}]
 const nested = [1, [2, 3]];
 const copy = [...nested];
 
-copy[1][0] = 99;
+copy[1][0] = 99; //phele 1 index outer wle p h jo ki [2, 3] then  inner wle p 0 index p 2 which overide by 99
 
 console.log(nested); // [1, [99, 3]] → affected!
 
@@ -131,25 +131,26 @@ console.log(nested); // [1, [99, 3]] → affected!
 
 //
 const originalArray = [1, [2, 3], { name: "Dipu" }];
-const deepCopiedArray = JSON.parse(JSON.stringify(originalArray)); // Nested array is preserved, ✅ object is preserved, ✅ values are untouched.
+const stringifiedArray = JSON.stringify(originalArray);
+
+console.log(`stringifiedArray: ${stringifiedArray}`)
+const deepCopiedArray = JSON.parse(JSON.stringify(stringifiedArray)); // Nested array is preserved,  object is preserved,  values are untouched.
 
 deepCopiedArray[1][0] = 99;
-deepCopiedArray[2].name = "Alya";
+deepCopiedArray[2].name = "Alex";
 
-console.log(originalArray); // [1, [2, 3], { name: "Dipu" }]
-console.log(deepCopiedArray); // [1, [99, 3], { name: "Alya" }]
+console.log("the original array is",originalArray); // [1, [2, 3], { name: "Dipu" }]
+console.log("the deep copied array is",deepCopiedArray); // [1, [99, 3], { name: "Alex" }]
 
 
+// Array : some and every prototype
 
-// | Method             | Purpose                          | Output Type |
-// | ------------------ | -------------------------------- | ----------- |
-// | `JSON.stringify()` | Converts JS object → JSON string | `string`    |
-// | `JSON.parse()`     | Converts JSON string → JS object | `object`    |
+const numbers = [1, 2, 3, 4, 5];
 
-const obj = { name: "Dipu", age: 20 };
+// some() - checks if at least one element passes the test
+const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); // true
 
-// Convert object to string
-const str = JSON.stringify(obj); // '{"name":"Dipu","age":20}'
-
-// Convert string back to object
-const parsed = JSON.parse(str); // { name: "Dipu", age: 20 }
+// every() - checks if all elements pass the test
+const allEven = numbers.every(num => num % 2 === 0);
+console.log(allEven); // false
