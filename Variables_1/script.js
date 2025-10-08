@@ -34,8 +34,8 @@
 
 
 var a = 10;
-var a = 20;  // ✅ Redeclaration allowed
-a = 30;      // ✅ Reassignment or Initialization allowed 
+var a = 20;  //  Redeclaration allowed
+a = 30;      //  Reassignment or Initialization allowed 
 console.log(a); // 30
 
 // global scoped or functional scoped & braces scoped
@@ -45,7 +45,7 @@ function greet() {
     if (true) {
       var message = "Hello from var!";
     }
-    console.log(message); // ✅ Accessible here
+    console.log(message); // Accessible here
   }
   // console.log(message)  //it gives not defined
   greet();
@@ -82,15 +82,15 @@ function greet1() {
 // hoisting
 // The TDZ(Temporal Dead Zone) is the time between entering the scope and declaring the variable, during which access will throw a ReferenceError.
 
-// console.log(hoist_let); // ❌ ReferenceError: Cannot access 'b' before initialization
+// console.log(hoist_let); //  ReferenceError: Cannot access 'b' before initialization
 // let hoist_let = 20;
 
 
 
   // Const
 const d = 50;
-// // c = 60;       //❌ Error: Assignment to constant variable
-// // const c = 70; //❌ Error: Cannot redeclare
+// // c = 60;       // Error: Assignment to constant variable
+// // const c = 70; // Error: Cannot redeclare
 console.log(d); // 50
 
 // braces or  block scoped

@@ -26,6 +26,7 @@ function displayDate() {
 // Node Properties
 const navDiv = document.getElementById("navExample");
 const firstChild = navDiv.firstChild; // Might be a text node (whitespace)
+
 const firstElement = navDiv.firstElementChild; // First actual element
 const lastElement = navDiv.lastElementChild;
 

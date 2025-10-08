@@ -1,44 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Event Example</title>
 </head>
-
 <body>
-    <button onclick="showDetails(event)">Click Me</button>
+  <button id="myBtn">Click Me</button>
+  <br><br>
+  <input id="myInput" placeholder="Type something..." />
+  <br><br>
+  <form id="myForm">
+    <input type="text" placeholder="Enter name" />
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <div id="parent" style="padding:20px; background:lightblue;">
+    Parent
+    <div id="child" style="padding:20px; background:lightgreen;">Child</div>
+  </div>
 
-    <button id="btn">Click</button>
-
-
-    <input type="text" id="inputBox" placeholder="Type something..." />
-
-    <script>
-        document.getElementById("inputBox").addEventListener("keydown", function (event) {
-            console.log("You pressed:", event.key);
-        });
-    </script>
-
-
-    <script>
-        document.getElementById("btn").addEventListener("click", function (event) {
-            console.log("You clicked the button!");
-            console.log("Mouse X:", event.clientX);
-            console.log("Mouse Y:", event.clientY);
-            console.log("Event Type:", event.type);
-            console.log("Target:", event.target);
-        });
-    </script>
-
-
-    <script>
-        function showDetails(event) {
-            console.log(event); // See all the event details
-        }
-    </script>
-
+  <script src="index.js"></script>
 </body>
-
-</html><button onclick="showDetails(event)">Click Me</button>
+</html>

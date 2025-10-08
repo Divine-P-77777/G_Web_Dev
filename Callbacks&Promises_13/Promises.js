@@ -4,10 +4,10 @@
 
 
 // 🔸 Three States of a Promise
-// State	Description
-// pending	The initial state (still processing)
-// fulfilled/resolved	The operation completed successfully
-// rejected	The operation failed (an error occurred)
+// State	             Description
+// pending	           The initial state (still processing)
+// fulfilled/resolved	 The operation completed successfully
+// rejected	           The operation failed (an error occurred)
 
 
 // Example:

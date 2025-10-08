@@ -17,7 +17,7 @@ b = "Phillic";
 console.log(a); // 👉 "Deepak"
 console.log(b); // 👉 "Phillic"
 
-// ✅ 2️⃣ Reference Data Types (Mutable :  make changes on values)
+// Reference Data Types (Mutable :  make changes on values)
 // These hold collections, copied by reference (point to same memory)
 // Stored in heap memory
 
@@ -34,9 +34,7 @@ console.log(obj1);           // 👉 { name: "Phillic", age: 14 }
 console.log(Array.isArray(obj1));  // 👉 false (it's object)
 console.log(obj2.name);      // 👉 "Phillic"
 
-// Example: Array check
-let flowers = ["🌹 Rose", "🌻 Sunflower", "🌸 Cherry Blossom"];
-console.log(Array.isArray(flowers));  // 👉 true
+
 
 //  Summary
 // Stack -> primitives, function calls (fast, small space)
@@ -62,10 +60,6 @@ let abc= parseInt("42")
 console.log(`the type is ${typeof abc} and the value is ${abc}`);          // 👉 42 (string to integer)
 console.log(parseFloat("3.14"));      // 👉 3.14 (string to float)
 console.log(Number("123"));           // 👉 123 (number conversion)
-//unary Plus
-console.log(+"99");                   // ⭐ 99 (unary plus converts to number)
-console.log(+true) //gives 1
-console.log(+false) //gives 0
 
 // Number to String
 console.log(String(456));             // 👉 "456"
@@ -92,4 +86,29 @@ console.log(big + 10n);               // 👉 BigInt operation
 const id = Symbol("id");
 console.log(typeof id);               // 👉 "symbol"
 
+
+//unary Plus :This operator tries to convert its operand into a number.
+console.log(+"123");       // 123   (string → number)
+console.log(+"3.14");      // 3.14  (string → float number)
+console.log(+"");          // 0     (empty string → 0)
+console.log(+" ");         // 0     (whitespace → 0)
+console.log(+"0015");      // 15    (leading zeros ignored)
+
+// Booleans
+console.log(+true);        // 1
+console.log(+false);       // 0
+
+// null, undefined
+console.log(+null);        // 0
+console.log(+undefined);   // NaN   (not a number)
+
+// NaN cases
+console.log(+"abc");       // NaN   (non-numeric string)
+console.log(+{});          // NaN   (object can’t be converted directly)
+console.log(+[]);          // 0     (empty array → 0)
+console.log(+[5]);         // 5     (single-element array → number)
+console.log(+[1,2]);       // NaN   (multi-element array → NaN)
+
+// Dates
+console.log(+new Date("2025-01-01")); // 1735689600000 (timestamp in ms)
 

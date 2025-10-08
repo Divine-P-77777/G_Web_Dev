@@ -1,3 +1,11 @@
+
+// | Feature        | Set                | Map                          |
+// | -------------- | ------------------ | ---------------------------- |
+// | Structure      | Values only        | Key-value pairs              |
+// | Unique entries | Yes                | Keys are unique              |
+// | Key types      | N/A                | Any data type (even objects) |
+// | Use case       | Track unique items | Associate data with keys     |
+
 const  mySet = new Set();
 const  p = {
     name: "John",
@@ -7,7 +15,7 @@ mySet.add(p);
 mySet.add({...p, age: 31 }); // Adding a copy of the object
 
 
-console.log(mySet); // 👉 2 (two different objects)
+console.log(mySet); // 👉 2 (two different objects) like Set(2) { { name: 'John', age: 30 }, { name: 'John', age: 31 } }
 
 
 // mySet.clear(); // Clear the set
@@ -32,13 +40,14 @@ myMap.set(true, "Yes");
 console.log(myMap.get("name")); // "Alice"
 console.log(myMap.has(42));     // true
 
-console.log(myMap.entries().next());       // 3 (three key-value pairs)
+// .get(key) → retrieves the value for a key.
 
+// .has(key) → checks if key exists.
 
+console.log("the maps representation is",myMap.entries().next());       // 3 (three key-value pairs)
 
-// | Feature        | Set                | Map                          |
-// | -------------- | ------------------ | ---------------------------- |
-// | Structure      | Values only        | Key-value pairs              |
-// | Unique entries | Yes                | Keys are unique              |
-// | Key types      | N/A                | Any data type (even objects) |
-// | Use case       | Track unique items | Associate data with keys     |
+// myMap.entries() returns an iterator object over [key, value] pairs.
+
+// .next() gets the first entry in that iterator.
+
+// one: false → means iteration is not finished.

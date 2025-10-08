@@ -49,3 +49,9 @@ let loveStory = {
 for (let key in loveStory) {
   console.log(key + ": " + loveStory[key]);  //loveStory[key] return value
 }
+
+// forEach loop
+// 🔹 Loops through array elements
+names.forEach((name) => {
+  console.log("Naam: ", name);
+});

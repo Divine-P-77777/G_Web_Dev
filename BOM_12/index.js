@@ -21,7 +21,7 @@ console.log(navigator.language);   // e.g. "en-US"
 console.log(navigator.onLine);     // true/false (online status)
 
 
-// 3️⃣ screen
+// screen
 // Info about the user’s screen.
 
 console.log(screen.width, screen.height);
@@ -34,8 +34,8 @@ console.log(screen.availWidth, screen.availHeight);
 // Example:
 
 console.log(location.href);   // Full URL
-console.log(location.hostname); 
-console.log(location.pathname); 
+console.log(location.hostname);
+console.log(location.pathname);
 // Redirect
 location.href = "https://example.com";
 // Reload
@@ -83,16 +83,21 @@ win.close();
 window.print();
 
 
-// 9️⃣ localStorage / sessionStorage  are temporary storage
-// Store data in browser.
+// localStorage
 
 
-// | Feature           | `localStorage`                                    | `sessionStorage`                               |
-// | ----------------- | ------------------------------------------------- | ---------------------------------------------- |
-// | **Lifespan**      | Persists even after the browser is closed         | Clears when the tab or browser is closed       |
-// | **Scope**         | Shared across all tabs/windows of the same origin | Only available in the current tab              |
-// | **Storage Limit** | \~5MB                                             | \~5MB                                          |
-// | **Use Case**      | Long-term storage (e.g., user settings)           | Temporary data for a session (e.g., form data) |
+// Lifespan: Persists even after closing the browser.
+// Scope: Shared across all tabs and windows of the same origin.
+// Storage Limit: Around 5MB.
+// Use Case: Store long-term data like user settings, preferences, or themes.
+
+// 🔹 sessionStorage
+
+// Lifespan: Clears automatically when the tab or browser is closed.
+// Scope: Only available in the current tab.
+// Storage Limit: Around 5MB.
+// Use Case: Store temporary session data like form inputs or login state for a single tab.
+
 
 
 console.log(window.localStorage);  //or  console.log(localStorage);  // Access localStorage
@@ -100,7 +105,7 @@ console.log(window.sessionStorage); // Access sessionStorage
 console.log(window.cookieStore); // Access cookies
 
 
-class StorageExample {  
+class StorageExample {
     saveDataToLocalStorage(key, value) {
         localStorage.setItem(key, JSON.stringify(value));
     }
@@ -109,31 +114,31 @@ class StorageExample {
         return JSON.parse(localStorage.getItem(key));
     }
 
- clearLocalStorage() {
+    clearLocalStorage() {
         localStorage.clear();
     }
 
     removeDataFromLocalStorage(key) {
         localStorage.removeItem(key);
-    }   
+    }
 }
 
 
- const l1 = new StorageExample();
-  const l2 = new StorageExample();
+const l1 = new StorageExample();
+const l2 = new StorageExample();
 
-  const now = new Date();
-  l1.saveDataToLocalStorage("user", { name: "John", age: 30 });
-  l2.saveDataToLocalStorage("Date", now);
+const now = new Date();
+l1.saveDataToLocalStorage("user", { name: "John", age: 30 });
+l2.saveDataToLocalStorage("Date", now);
 
-  const h2 = document.createElement("h2");
-  h2.innerHTML = now.toString();
-  document.body.appendChild(h2);
+const h2 = document.createElement("h2");
+h2.innerHTML = now.toString();
+document.body.appendChild(h2);
 
-  document.querySelector("button").addEventListener("click", () => {
-      l2.removeDataFromLocalStorage("Date");
-      alert("Date removed from localStorage!");
-  });
+document.querySelector("button").addEventListener("click", () => {
+    l2.removeDataFromLocalStorage("Date");
+    alert("Date removed from localStorage!");
+});
 
 
 
@@ -157,11 +162,8 @@ sessionStorage.removeItem("username");
 sessionStorage.clear();
 
 // Cookies are small pieces of data (usually key-value pairs) stored in the browser by a website. They are primarily used for:
-
 // Session management (e.g., login state)
-
 // Tracking (e.g., analytics, ads)
-
 // Personalization (e.g., saving user preferences)
 
 document.cookie = "username=Deepak";  // Set a Cookie
@@ -172,10 +174,10 @@ document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";  // Delete
 
 
 
-// 1️⃣0️⃣ console
+// console
 // Logging + debugging.
 
 console.log("Info");
 console.warn("Warning");
 console.error("Error");
-console.table([{a:1,b:2},{a:3,b:4}]);
+console.table([{ a: 1, b: 2 }, { a: 3, b: 4 }]);
