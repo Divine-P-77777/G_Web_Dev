@@ -26,7 +26,7 @@
 // | `preventDefault()`   | Prevents the default browser action (like form submission) |
 // | `stopPropagation()`  | Stops the event from bubbling up to parent elements        |
 
-// When submit event triggers , browser refreshes(default behavior) the page immediately so the form may not be submitted properly.aSo we use preventDefault() to stop the page from refreshing.
+// When submit event triggers , browser refreshes(default behavior) the page immediately and the form may not be submitted properly.So we use preventDefault() to stop the page from refreshing.
 
 // Select elements
 const btn = document.getElementById("myBtn");
@@ -38,7 +38,7 @@ btn.addEventListener("click", function (event) {
   console.log("👉 Event Type:", event.type); // type
   console.log("👉 Target Element:", event.target); // target
   console.log("👉 Current Target:", event.currentTarget); // currentTarget
-  console.log("👉 Mouse Position:", event.clientX, event.clientY); // clientX, clientY
+  console.log("👉 Mouse Position:", event.clientXn  , event.clientY); // clientX, clientY
 });
 
 // Example 2: Keyboard Event

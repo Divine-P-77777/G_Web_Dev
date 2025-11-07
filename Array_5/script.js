@@ -92,6 +92,13 @@ console.log(name.sort())
 console.log(name.reverse())
 console.log(num.reverse())
 
+//The .map() method is an Array method
+// Loops through each element
+// Returns a new array
+// Doesn’t mutate the original array
+const array = [1, 2, 3];
+const doubled = array.map(num => num * 2);
+
 
 
 // ... (spread operator) imp
@@ -123,18 +130,22 @@ console.log(newArr); // [1, 2, 3, 4,{}]
 const nested = [1, [2, 3]];
 const copy = [...nested];
 
-copy[1][0] = 99; //phele 1 index outer wle p h jo ki [2, 3] then  inner wle p 0 index p 2 which overide by 99
+copy[1][0] = 99; //phele 1 index outer wlla pe hai jo ki [2, 3] then  inner wlla pe 0 index pe 2 which overide by 99
 
 console.log(nested); // [1, [99, 3]] → affected!
 
+// here the nested variable  — deeply nested elements still point to the same memory address,
+// even if you “copy” or “reference” only the outer structure —
+// unless you explicitly create a deep copy.
 
 
 //
 const originalArray = [1, [2, 3], { name: "Dipu" }];
-const stringifiedArray = JSON.stringify(originalArray);
+const stringifiedArray = JSON.stringify(originalArray);// /This string contains data only, not references or memory links.
 
-console.log(`stringifiedArray: ${stringifiedArray}`)
-const deepCopiedArray = JSON.parse(JSON.stringify(stringifiedArray)); // Nested array is preserved,  object is preserved,  values are untouched.
+console.log(`stringifiedArray: ${stringifiedArray}`) 
+
+const deepCopiedArray = JSON.parse(stringifiedArray); // Nested array is preserved,  object is preserved,  values are untouched. and JSON.parse(...) reads that string and builds a brand-new array and brand-new nested objects in memory.
 
 deepCopiedArray[1][0] = 99;
 deepCopiedArray[2].name = "Alex";

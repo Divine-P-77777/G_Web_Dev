@@ -61,7 +61,7 @@ console.log(person2);
 //   console.log(person3);
 //   console.log(person4);
 
-// Note:The value of this will become the new object when a new object is created.
+// Note:The value of this will become the "new object" when a new object is created.
 
 function School(standard, roll_no, subject, highest_mark) {
   // this.Student_name = "John Doe"; // Property Default Values

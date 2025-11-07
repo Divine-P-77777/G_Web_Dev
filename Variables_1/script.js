@@ -26,7 +26,7 @@
 
 // Hoisting
 
-// console.log(`here hoisting is pyare jaanu: ${c}`)  //here assign undefined by default by javascript
+// console.log(`here hoisting is : ${c}`)  //here assign undefined by default by javascript
 // var c="hoist"
 
 // var c; it comes top of the  code  becaue it the behaviour of javascript 
@@ -35,10 +35,10 @@
 
 var a = 10;
 var a = 20;  //  Redeclaration allowed
-a = 30;      //  Reassignment or Initialization allowed 
+a = 30;      //  Reassignment
 console.log(a); // 30
 
-// global scoped or functional scoped & braces scoped
+// global scoped/functional scoped & braces scoped
 
 // var is functional/global scoped and const,let are braces scoped
 function greet() {
@@ -82,7 +82,7 @@ function greet1() {
 // hoisting
 // The TDZ(Temporal Dead Zone) is the time between entering the scope and declaring the variable, during which access will throw a ReferenceError.
 
-// console.log(hoist_let); //  ReferenceError: Cannot access 'b' before initialization
+// console.log(hoist_let); //  ReferenceError: Cannot access 'hoist_let' before initialization
 // let hoist_let = 20;
 
 
@@ -94,18 +94,19 @@ const d = 50;
 console.log(d); // 50
 
 // braces or  block scoped
+
 function greet2() {
     if (true) {
       const msg = "Hello from const!";
    
-    console.log(msg);  }// ✅ Accessible here
+    console.log(msg);  }//  Accessible here
   }
   
   greet2();
 
 // hoisting
 
-// console.log(hoist_const); // ❌ ReferenceError: Cannot access 'c' before initialization
+// console.log(hoist_const); //  ReferenceError: Cannot access 'c' before initialization
 // const hoist_const = 30;
 
 

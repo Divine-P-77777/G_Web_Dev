@@ -53,7 +53,7 @@ console.log("Replace of DynamicPhillic is " + name.replace("Dynamic", "Deepak"))
 // Splits string into array.
 
 
-console.log( name.split("a")); // it gives all character of string in array and remove a 
+console.log( name.split("a")); // it gives all character of string in array and remove "a" 
 
 
 // concat()

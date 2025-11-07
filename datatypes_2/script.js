@@ -12,7 +12,7 @@
 // BigInt    12345678901234567890n
 
 let a = "Deepak";   
-let b = a;      //here we create a copy of  a in b     
+let b = a;      // here we create a copy of  a in b     
 b = "Phillic";      
 console.log(a); // 👉 "Deepak"
 console.log(b); // 👉 "Phillic"
@@ -102,11 +102,13 @@ console.log(+false);       // 0
 console.log(+null);        // 0
 console.log(+undefined);   // NaN   (not a number)
 
+console.log(+[]);          // 0     (empty array → 0)
+console.log(+[5]);         // 5     (single-element array → number)
+
 // NaN cases
 console.log(+"abc");       // NaN   (non-numeric string)
 console.log(+{});          // NaN   (object can’t be converted directly)
-console.log(+[]);          // 0     (empty array → 0)
-console.log(+[5]);         // 5     (single-element array → number)
+
 console.log(+[1,2]);       // NaN   (multi-element array → NaN)
 
 // Dates

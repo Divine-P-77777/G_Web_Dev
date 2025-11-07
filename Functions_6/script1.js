@@ -51,6 +51,16 @@ function Person(name, age) {
 }
 
 const deepak = new Person("Deepak", 20);
+
+// ⚙️ So what new does behind the scenes
+//JS internally does:
+
+// Creates a new empty object: {}
+// Sets that object’s prototype → Person.prototype
+// Binds this inside Person to that new object
+// Runs the function body
+// Returns this (the new object) by default
+
 console.log(deepak);  // this gives object of Person class with properties name and age
 //  console.log(deepak.name); // this gives Deepak from object
 
@@ -58,6 +68,7 @@ console.log(deepak);  // this gives object of Person class with properties name 
 
 const myFunction = new Function("a", "b", "return a * b");
 // Isme parameters aur function body dono string ke form mein likhe jaate hain.
+
 let z = myFunction(4, 3);
 console.log(z); // this gives 12 from function call
 
@@ -90,7 +101,7 @@ function myFunction2(y) {
 }
 // function bhi ek object hi hai — jisme properties aur methods hote hain 
 
-console.log(typeof myFunction2); // this gives 25 from function call
+console.log(typeof myFunction2); 
 
 
 

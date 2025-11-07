@@ -47,7 +47,7 @@ let loveStory = {
 };
 
 for (let key in loveStory) {
-  console.log(key + ": " + loveStory[key]);  //loveStory[key] return value
+  console.log(key + ": " + loveStory[key]);  //objectname[key] return value
 }
 
 // forEach loop
