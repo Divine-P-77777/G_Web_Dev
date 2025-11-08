@@ -1,5 +1,5 @@
 //Function Definitions
-// ✅ 1. Normal Function Syntax
+// 1. Normal Function Syntax
 
 
 function sayLove() {

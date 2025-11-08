@@ -3,7 +3,7 @@
 
 // Asynchronous means the next taks depends on previous task . Synchronous hadnt depends all starts together
 
-// 🧠 Why use async/await?
+// Why use async/await?
 // Avoids callback hell and .then() chaining.
 
 // Easier error handling using try/catch.

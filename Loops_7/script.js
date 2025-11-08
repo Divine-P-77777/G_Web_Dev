@@ -1,7 +1,7 @@
 // for loop
 // Use when you know how many times you want to loop.
 for (let i = 0; i < 5; i++) {
-    // console.log("Hello Jaanu 💖", i);
+    // console.log("Hello Jaanu ", i);
 }
 
 
